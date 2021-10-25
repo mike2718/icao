@@ -1,9 +1,15 @@
-// 标准地将国内业余无线电呼号转换成字母解释法的一系列单词组合
-//
-// 参考了公开发布的考试题库、
-// 业余无线电通信（第五版）第49页的表、以及
-// 北约音标字母条目 https://zh.wikipedia.org/wiki/%E5%8C%97%E7%BA%A6%E9%9F%B3%E6%A0%87%E5%AD%97%E6%AF%8D
-// 整理为在中国大陆的习惯用法
+/* 
+   标准地将国内业余无线电呼号转换成字母解释法的一系列单词组合
+
+   用法：
+     pcc -Wall -Wpedantic -Wextra -Werror -O0 -std=c11 -o icao icao.c && ./icao
+
+   参考了
+     公开发布的考试题库、
+     业余无线电通信（第五版）第49页表2-1、
+     北约音标字母条目 https://zh.wikipedia.org/wiki/%E5%8C%97%E7%BA%A6%E9%9F%B3%E6%A0%87%E5%AD%97%E6%AF%8D
+   整理为在中国大陆的习惯用法
+*/
 
 #include <stdio.h>
 #include <string.h>
@@ -13,7 +19,7 @@ int main ()
     char word[7];
     char *phonetic[48]= { "test" };
     char **p = phonetic;
-    int count = 0, j = 0, k;
+    unsigned int count = 0, j = 0, k;
 
     printf("请输入一个呼号：");
     scanf("%[^\n]%*c", word);
@@ -101,7 +107,7 @@ int main ()
     printf("呼号%s的字母解释法是：\n", word);
     for ( k = 0; k < j ; k++ )
         printf("%s\t", p[k]);
-    printf("\n\n");
+    printf("\n");
 
     return 0;
 }

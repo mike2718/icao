@@ -17,5 +17,4 @@ mike@hp2540p:~/dev2/icao/ > pcc -o icao icao.c && ./icao
 请输入一个呼号：bg7xtq
 呼号bg7xtq的字母解释法是：
  Bravo   Golf    Seven   X-ray   Tango   Quebec
-
 ```

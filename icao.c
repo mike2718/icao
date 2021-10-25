@@ -5,7 +5,7 @@
      pcc -Wall -Wpedantic -Wextra -Werror -O0 -std=c11 -o icao icao.c && ./icao
 
    参考了
-     公开发布的考试题库、
+     TXT格式题库 http://114.115.246.55:8091/CRAC/userfiles/file/exam/download/2021-09-24/TXT%E9%A2%98%E5%BA%93%E5%8C%85(v20210924).zip
      业余无线电通信（第五版）第49页表2-1、
      北约音标字母条目 https://zh.wikipedia.org/wiki/%E5%8C%97%E7%BA%A6%E9%9F%B3%E6%A0%87%E5%AD%97%E6%AF%8D
    整理为在中国大陆的习惯用法

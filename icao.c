@@ -101,7 +101,7 @@ int main ()
     printf("呼号%s的字母解释法是：\n", word);
     for ( k = 0; k < j ; k++ )
         printf("%s\t", p[k]);
-    printf("\n");
+    printf("\n\n");
 
     return 0;
 }

@@ -1,0 +1,105 @@
+// 参考了业余无线电通信（第五版）第49页的表，以及
+// 北约音标字母条目https://en.wikipedia.org/wiki/NATO_phonetic_alphabet
+// 整理为在中国大陆的习惯用法
+
+#include <stdio.h>
+#include <string.h>
+
+int main ()
+{
+    char word[100];
+    char *phonetic[2000]= { "test" };
+    char **p = phonetic;
+    int count = 0, j = 0, k;
+
+    printf("请输入一个呼号：");
+    scanf("%[^\n]%*c", word);
+
+    while(count < sizeof(word))
+    {
+        switch (word[count])
+        {
+            case 'A': case 'a': p[j] = " Alfa"; j++;
+                break;
+            case 'B': case 'b': p[j] = " Bravo"; j++;
+                break;
+            case 'C': case 'c': p[j] = " Charlie"; j++;
+                break;
+            case 'D': case 'd': p[j] = " Delta"; j++;
+                break;
+            case 'E': case 'e': p[j] = " Echo"; j++;
+                break;
+            case 'F': case 'f': p[j] = " Foxtrot"; j++;
+                break;
+            case 'G': case 'g': p[j] = " Golf"; j++;
+                break;
+            case 'H': case 'h': p[j] = " Hotel"; j++;
+                break;
+            case 'I': case 'i': p[j] = " India"; j++;
+                break;
+            case 'J': case 'j': p[j] = " Juliett"; j++;
+                break;
+            case 'K': case 'k': p[j] = " Kilo"; j++;
+                break;
+            case 'L': case 'l': p[j] = " Lima"; j++;
+                break;
+            case 'M': case 'm': p[j] = " Mike"; j++;
+                break;
+            case 'N': case 'n': p[j] = " November"; j++;
+                break;
+            case 'O': case 'o': p[j] = " Oscar"; j++;
+                break;
+            case 'P': case 'p': p[j] = " Papa"; j++;
+                break;
+            case 'Q': case 'q': p[j] = " Quebec"; j++;
+                break;
+            case 'R': case 'r': p[j] = " Romeo"; j++;
+                break;
+            case 'S': case 's': p[j] = " Sierra"; j++;
+                break;
+            case 'T': case 't': p[j] = " Tango"; j++;
+                break;
+            case 'U': case 'u': p[j] = " Uniform"; j++;
+                break;
+            case 'V': case 'v': p[j] = " Victor"; j++;
+                break;
+            case 'W': case 'w': p[j] = " Whiskey"; j++;
+                break;
+            case 'X': case 'x': p[j] = " X-ray"; j++;
+                break;
+            case 'Y': case 'y': p[j] = " Yankee"; j++;
+                break;
+            case 'Z': case 'z': p[j] = " Zulu"; j++;
+                break;
+            case '0': p[j] = " Zero"; j++;
+                break;
+            case '1': p[j] = " One"; j++;
+                break;
+            case '2': p[j] = " Two"; j++;
+                break;
+            case '3': p[j] = " Three"; j++;
+                break;
+            case '4': p[j] = " Four"; j++;
+                break;
+            case '5': p[j] = " Five"; j++;
+                break;
+            case '6': p[j] = " Six"; j++;
+                break;
+            case '7': p[j] = " Seven"; j++;
+                break;
+            case '8': p[j] = " Eight"; j++;
+                break;
+            case '9': p[j] = " Nine"; j++;
+                break;
+            //default: printf("您输入的部分内容非字母和数字。\n");
+        }
+        count++;
+    }
+    printf("呼号%s的字母解释法是：\n", word);
+    for ( k = 0; k < j ; k++ )
+        printf("%s\t", p[k]);
+    printf("\n");
+
+    return 0;
+}
+

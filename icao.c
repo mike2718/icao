@@ -1,5 +1,5 @@
 // 参考了业余无线电通信（第五版）第49页的表，以及
-// 北约音标字母条目https://en.wikipedia.org/wiki/NATO_phonetic_alphabet
+// 北约音标字母条目 https://zh.wikipedia.org/wiki/%E5%8C%97%E7%BA%A6%E9%9F%B3%E6%A0%87%E5%AD%97%E6%AF%8D
 // 整理为在中国大陆的习惯用法
 
 #include <stdio.h>
@@ -7,8 +7,8 @@
 
 int main ()
 {
-    char word[100];
-    char *phonetic[2000]= { "test" };
+    char word[7];
+    char *phonetic[48]= { "test" };
     char **p = phonetic;
     int count = 0, j = 0, k;
 

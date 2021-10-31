@@ -17,7 +17,7 @@
 int main ()
 {
     char word[7];
-    char *phonetic[48]= { "test" };
+    char *phonetic[48]= { " November" };
     char **p = phonetic;
     unsigned int count = 0, j = 0, k;
 

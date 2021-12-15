@@ -10,10 +10,10 @@
 ## 用法
 
 ```
-% ./icao
+% clang -O0 -Wall -Wpedantic -Wextra -Werror -std=c99 -o icao icao.c && ./icao
         将呼号转换成字母解释法的单词组合的C程序
 
-请输入要转换的呼号：bg7xtq
-该呼号的字母解释法是： Bravo Golf Seven X-ray Tango Quebec
+请输入要转换的呼号：bs7h
+该呼号的字母解释法是： Bravo Sierra Seven Hotel
 
 ```
